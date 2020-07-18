@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2389244957711812165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2389244957711812163}
+  - component: {fileID: 2389244957711812164}
+  - component: {fileID: -5575554818075697246}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2389244957711812163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389244957711812165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2389244957711812164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389244957711812165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b05b03c23f901f41be4949a0ad91e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ghostPrefab: {fileID: 8195918986454190684, guid: 4a8b820df167e0143a5781e9780ce3cc,
+    type: 3}
+  _coinPrefab: {fileID: 6855492467345840485, guid: 3b6783b4ac78de94f9010d3bb9686c7a,
+    type: 3}
+  _ringPrefab: {fileID: -7554065783489960409, guid: 69dc536deefde0842bfa6d6c33a659e3,
+    type: 3}
+  _ghostGuardPrefab: {fileID: 8871373105421703561, guid: 1c26ae1d8a16207498e6370f3da5fb36,
+    type: 3}
+  _coinSpawnPoints: {fileID: 1421851631515080689, guid: cb3cc6aec29d6bc43a8c26d41e16a5e0,
+    type: 3}
+  _inventoryPrefab: {fileID: -3299816030341592085, guid: cd3cc2f2688ee694baa84671c055048d,
+    type: 3}
+  _ghostGuardSpawnPoint: {fileID: -379902136782826604, guid: 79a45e74f8e07df4e8c30b4b23e06576,
+    type: 3}
+  _ringSpawnPoint: {fileID: -7204643550966507176, guid: 47ccad961917cd04eb8101e755cb516d,
+    type: 3}
+--- !u!114 &-5575554818075697246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389244957711812165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f94d1fd48db27742a85a8584679713c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
