@@ -10,7 +10,7 @@ public class GhostGuardAlarm : MonoBehaviour
     [SerializeField] private GhostGuardSpawnPoint _ghostGuardSpawnPoint;
     [SerializeField] private Ghost _ghostPrefab;
     private Vector3 _ghostSpawnPoint;
-    bool isVolumeIncrease;
+    private bool _isVolumeIncrease;
     private AudioSource _audioSource;
 
     private void Start()
@@ -27,7 +27,7 @@ public class GhostGuardAlarm : MonoBehaviour
             {
                 _audioSource.Play();
             }
-            isVolumeIncrease = true;
+            _isVolumeIncrease = true;
             StartCoroutine(IncreaseVolume());
             StartCoroutine(SpawnGhostAfter2Seconds());
         }
@@ -37,14 +37,13 @@ public class GhostGuardAlarm : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Player>(out Player platform))
         {
-            isVolumeIncrease = false;
+            _isVolumeIncrease = false;
             StartCoroutine(ReduceVolume());
         }
-       
     }
     private IEnumerator ReduceVolume()
     {
-        while (isVolumeIncrease == false)
+        while (_isVolumeIncrease == false)
         {
             _audioSource.volume -=  0.1f * Time.deltaTime;
             yield return null;
@@ -52,7 +51,7 @@ public class GhostGuardAlarm : MonoBehaviour
     }
     private IEnumerator IncreaseVolume()
     {
-        while (isVolumeIncrease == true) 
+        while (_isVolumeIncrease == true) 
         {
             _audioSource.volume +=  0.1f * Time.deltaTime;
             yield return null;

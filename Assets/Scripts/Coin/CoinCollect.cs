@@ -8,7 +8,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Animator))]
 public class CoinCollect : MonoBehaviour
 {
-    [SerializeField] UnityEvent _collectReached;
+    [SerializeField] private UnityEvent _collectReached;
     private Animator _animator;
     private AudioSource _coinAudioSource;
 
